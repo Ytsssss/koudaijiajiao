@@ -131,7 +131,7 @@ public class IdentifyActivity extends Activity{
                 } catch (FileNotFoundException e) {
                     e.printStackTrace();
                 }
-                
+
                 file.saveInBackground(new SaveCallback() {
                     @Override
                     public void done(AVException e) {
@@ -139,9 +139,12 @@ public class IdentifyActivity extends Activity{
                     }
                 });
 
-                url=file.getUrl();
-                usermessage.put("Url",url);
-
+                if (Picture.getDrawable()==null){
+                    Toast.makeText(IdentifyActivity.this,"学生证照片不存在",Toast.LENGTH_SHORT).show();
+                    return;
+                }else { url=file.getUrl();
+                    usermessage.put("Url",url);
+                }
                 usermessage.saveInBackground();//存储信息
                 Intent intent = new Intent(IdentifyActivity.this, MainActivity.class);
                 startActivity(intent);
