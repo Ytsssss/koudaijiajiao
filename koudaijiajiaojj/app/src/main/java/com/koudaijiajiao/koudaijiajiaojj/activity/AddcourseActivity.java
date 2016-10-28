@@ -33,6 +33,8 @@ public class AddcourseActivity  extends Activity {
     //------------------ 定位相关-------------
 
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,7 +49,7 @@ public class AddcourseActivity  extends Activity {
 
     }
 
-
+//定位
     private void initLocation() {
         //初始化定位
         mLocationClient = new AMapLocationClient(getApplicationContext());
