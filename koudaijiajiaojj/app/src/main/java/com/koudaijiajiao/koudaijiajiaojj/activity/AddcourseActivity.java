@@ -2,6 +2,7 @@ package com.koudaijiajiao.koudaijiajiaojj.activity;
 
 import android.app.Activity;
 import android.os.Bundle;
+import com.koudaijiajiao.koudaijiajiaojj.R;
 import android.util.Log;
 import android.widget.Toast;
 
@@ -12,12 +13,13 @@ import com.amap.api.location.AMapLocationListener;
 import com.koudaijiajiao.koudaijiajiaojj.R;
 import com.koudaijiajiao.koudaijiajiaojj.unity.Location;
 
+
 /**
  * Created by killandy on 2016/10/27.
  */
 
 //课程信息添加
-public class AddcourseActivity  extends Activity{
+public class AddcourseActivity  extends Activity {
 
     //------------------ 定位相关-------------
     //声明AMapLocationClient类对象
@@ -27,7 +29,7 @@ public class AddcourseActivity  extends Activity{
     //声明定位回调监听器
     public AMapLocationListener mLocationListener = null;
     //location实体
-    public Location location=null;
+    public Location location = null;
     //------------------ 定位相关-------------
 
 
@@ -50,7 +52,7 @@ public class AddcourseActivity  extends Activity{
         //初始化定位
         mLocationClient = new AMapLocationClient(getApplicationContext());
         //设置定位回调监听
-        mLocationListener=new AMapLocationListener() {
+        mLocationListener = new AMapLocationListener() {
             @Override
             public void onLocationChanged(AMapLocation amapLocation) {
                 if (amapLocation != null) {
@@ -59,9 +61,9 @@ public class AddcourseActivity  extends Activity{
                         location.setLatitude(amapLocation.getLatitude());//获取纬度
                         location.setLongitude(amapLocation.getLongitude());//获取经度
                         location.setAddress(amapLocation.getAddress());//地址
-                    }else {
+                    } else {
                         //定位失败时，可通过ErrCode（错误码）信息来确定失败的原因，errInfo是错误信息，详见错误码表。
-                        Log.e("AmapError","Location Error, ErrCode:"
+                        Log.e("AmapError", "Location Error, ErrCode:"
                                 + amapLocation.getErrorCode() + ", errInfo:"
                                 + amapLocation.getErrorInfo());
                     }
@@ -79,5 +81,4 @@ public class AddcourseActivity  extends Activity{
         mLocationClient.startLocation();
 
     }
-
 }
