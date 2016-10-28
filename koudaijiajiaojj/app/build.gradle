@@ -43,4 +43,6 @@ dependencies {
     compile ('cn.leancloud.android:avoscloud-sdk:v3.+')
 //    glide库
     compile 'com.github.bumptech.glide:glide:3.7.0'
+//    Fbutton
+    compile 'info.hoang8f:fbutton:1.0.5'
 }
