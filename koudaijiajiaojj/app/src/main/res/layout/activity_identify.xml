@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TableLayout android:stretchColumns="1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <TableRow>
+        <TextView android:layout_height="wrap_content"
+            android:text="姓名:"/>
+        <EditText android:layout_height="wrap_content"
+            android:id="@+id/edit_identify_name"/>
+    </TableRow>
+    <TableRow>
+        <TextView android:layout_height="wrap_content"
+            android:text="学校:"/>
+        <EditText android:layout_height="wrap_content"
+            android:id="@+id/edit_identify_school"/>
+    </TableRow>
+    <TableRow>
+        <TextView android:layout_height="wrap_content"
+            android:text="专业:"/>
+        <EditText android:layout_height="wrap_content"
+            android:id="@+id/edit_identify_profession"/>
+    </TableRow>
+    <TableRow>
+        <TextView android:layout_height="wrap_content"
+            android:text="年级:"/>
+        <EditText android:layout_height="wrap_content"
+            android:id="@+id/edit_identify_grade"/>
+    </TableRow>
+    <TableRow>
+        <TextView android:layout_height="wrap_content"
+            android:text="身份证号:"/>
+        <EditText android:layout_height="wrap_content"
+            android:id="@+id/edit_identify_idcard"/>
+    </TableRow>
+    <TableRow>
+
+        <TextView android:layout_height="wrap_content"
+            android:text="学号:"/>
+        <EditText android:layout_height="wrap_content"
+            android:id="@+id/edit_identify_studentid"/>
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView android:layout_height="wrap_content"
+            android:text="简介:"/>
+        <EditText android:layout_height="wrap_content"
+            android:id="@+id/edit_identify_profile"/>
+    </TableRow>
+
+    <FrameLayout android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        >
+        <Button android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/edit_identify_getphoto"
+            android:text="学生证拍照:"/>
+        <ImageView
+            android:layout_marginLeft="140dp"
+            android:layout_height="170dp"
+            android:layout_width="180dp"
+            android:id="@+id/edit_identify_photo"
+            android:scaleType="fitCenter"/>
+    </FrameLayout>
+    <TableRow>
+        <Button android:layout_height="wrap_content"
+            android:text="提交"
+            android:id="@+id/edit_identify_send"
+            android:layout_span="2"/>
+    </TableRow>
+
+</TableLayout>
