@@ -31,10 +31,10 @@ import java.io.IOException;
  */
 //认证界面
 public class IdentifyActivity extends Activity{
-    EditText name, school, major, grade, idnumber, studentnumber, profile;
+    EditText name, school, major, grade, idnumber, studentnumber, age,call;
     Button picture, refer;
     ImageView Picture;
-    String Name, School, Major, Grade, Idnumber, Studentnumber, Profile,url;
+    String Name, School, Major, Grade, Idnumber, Studentnumber, Age,url,Call;
     public static final int TAKE_PHOTO = 1;
     public static final int CROP_PHOTO = 2;
     private Uri imageUri;
@@ -117,12 +117,20 @@ public class IdentifyActivity extends Activity{
                     usermessage.put("studentnumber", Studentnumber);//学号
                 }
 
-                if (TextUtils.isEmpty(profile.getText())) {
-                    Toast.makeText(IdentifyActivity.this,"简介不能为空",Toast.LENGTH_SHORT).show();
+                if (TextUtils.isEmpty(age.getText())) {
+                    Toast.makeText(IdentifyActivity.this,"年龄不能为空",Toast.LENGTH_SHORT).show();
                     return;
                 }else {
-                    Profile = profile.getText().toString();
-                    usermessage.put("profile", Profile);//简介
+                    Age = age.getText().toString();
+                    usermessage.put("Age", Age);//年龄
+                }
+
+                if (TextUtils.isEmpty(call.getText())) {
+                    Toast.makeText(IdentifyActivity.this,"称呼不能为空",Toast.LENGTH_SHORT).show();
+                    return;
+                }else {
+                    Call = call.getText().toString();
+                    usermessage.put("call", Call);//称呼
                 }
 
                 AVFile file = null;
@@ -160,10 +168,11 @@ public class IdentifyActivity extends Activity{
         grade = (EditText) findViewById(R.id.edit_identify_grade);
         idnumber = (EditText) findViewById(R.id.edit_identify_idcard);
         studentnumber = (EditText) findViewById(R.id.edit_identify_studentid);
-        profile = (EditText) findViewById(R.id.edit_identify_profile);
+        age = (EditText) findViewById(R.id.edit_identify_age);
         picture = (Button) findViewById(R.id.edit_identify_getphoto);
         refer = (Button) findViewById(R.id.edit_identify_send);
         Picture = (ImageView) findViewById(R.id.edit_identify_photo);
+        call= (EditText) findViewById(R.id.edit_identify_call);
     }
 
     @Override

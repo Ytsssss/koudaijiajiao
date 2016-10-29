@@ -47,7 +47,7 @@
         <activity android:name=".activity.ResetpasswordActivity"></activity>
         <activity android:name=".activity.AddcourseActivity"></activity>
         <activity android:name=".activity.ForgetpasswordActivity"></activity>
-
+        <activity android:name=".activity.CourseActivity"></activity>
     </application>
 
 </manifest>

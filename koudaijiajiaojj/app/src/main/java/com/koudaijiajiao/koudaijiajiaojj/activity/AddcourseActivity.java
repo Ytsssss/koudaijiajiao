@@ -1,9 +1,13 @@
 package com.koudaijiajiao.koudaijiajiaojj.activity;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import com.koudaijiajiao.koudaijiajiaojj.R;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.amap.api.location.AMapLocation;
@@ -21,6 +25,11 @@ import com.koudaijiajiao.koudaijiajiaojj.unity.Location;
 //课程信息添加
 public class AddcourseActivity  extends Activity {
 
+    TextView course;
+    Button addcourse;
+    final int RESULT_CODE=101;
+    final int REQUEST_CODE=1;
+
     //------------------ 定位相关-------------
     //声明AMapLocationClient类对象
     public AMapLocationClient mLocationClient = null;
@@ -33,8 +42,6 @@ public class AddcourseActivity  extends Activity {
     //------------------ 定位相关-------------
 
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,11 +50,39 @@ public class AddcourseActivity  extends Activity {
         //定位设置
         initLocation();
 
+        initClick();
+
     }
+
+    private void initClick() {
+
+        addcourse.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(AddcourseActivity.this,CourseActivity.class);
+                startActivityForResult(intent, REQUEST_CODE);
+            }
+        });//添加学科按钮
+
+
+    }
+
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if(requestCode==REQUEST_CODE) {
+            if(resultCode==RESULT_CODE) {
+                String result=data.getStringExtra("second");
+                course.setText(result);
+            }
+        }
+        super.onActivityResult(requestCode, resultCode, data);
+    }
+
 
     private void initView() {
-
+        addcourse= (Button) findViewById(R.id.btn_course_addcourse);//添加学科按钮
+        course= (TextView) findViewById(R.id.text_addcourse_course);//显示科目
     }
+
 
 //定位
     private void initLocation() {

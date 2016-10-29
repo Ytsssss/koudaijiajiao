@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="experienceArray">
+        <item>一年以内</item>
+        <item>两年</item>
+        <item>三年</item>
+        <item>三年以上</item>
+    </string-array>
+</resources>

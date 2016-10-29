@@ -45,11 +45,19 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <TextView android:layout_height="wrap_content"
-            android:text="简介:"/>
+            android:text="年龄:"/>
         <EditText android:layout_height="wrap_content"
-            android:id="@+id/edit_identify_profile"/>
+            android:id="@+id/edit_identify_age"/>
     </TableRow>
 
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView android:layout_height="wrap_content"
+            android:text="称呼:"/>
+        <EditText android:layout_height="wrap_content"
+            android:id="@+id/edit_identify_call"/>
+    </TableRow>
     <FrameLayout android:layout_height="wrap_content"
         android:layout_width="wrap_content"
         >

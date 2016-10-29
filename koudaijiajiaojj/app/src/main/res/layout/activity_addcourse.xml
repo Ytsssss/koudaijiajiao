@@ -1,6 +1,467 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-</LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="学科"/>
+                <Button
+                    android:id="@+id/btn_course_addcourse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="添加"/>
+                <TextView android:id="@+id/text_addcourse_course"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center"
+                    android:text=""/>
+            </LinearLayout>
+
+            <LinearLayout style="@style/common_horizontal_division_line_style" />
+           <LinearLayout
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content">
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="授课经验"/>
+               <!-- 定义一个授课经历下拉菜单-->
+               <Spinner
+                   android:id = "@+id/Spinner_time"
+                   android:layout_width = "wrap_content"
+                   android:layout_height ="wrap_content"
+                   android:entries="@array/experienceArray">
+               </Spinner >
+           </LinearLayout>
+
+            <LinearLayout style="@style/common_horizontal_division_line_style" />
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:text="是否允许试讲"/>
+
+                    <RadioButton
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:id="@+id/radio_addcourse_yes"
+                        android:text="是"
+                        />
+                    <RadioButton
+                        android:id="@+id/radio_addcourse_no"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:text="否"/>
+            </RadioGroup>
+
+            <LinearLayout style="@style/common_horizontal_division_line_style" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="联系方式"/>
+                <EditText
+                    android:id="@+id/edit_addcourse_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+                </EditText>
+            </LinearLayout>
+
+            <LinearLayout style="@style/common_horizontal_division_line_style" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="家庭住址"/>
+                <EditText
+                    android:id="@+id/edit_addcourse_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/common_horizontal_division_line_style" />
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="授课区域" />
+                    <RadioButton
+                        android:id="@+id/radio_addcourse_five"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5公里内"/>
+                    <RadioButton
+                        android:id="@+id/radio_addcourse_ten"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="10公里内"/>
+                    <RadioButton
+                        android:id="@+id/radio_addcourse_twenty"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="20公里内"/>
+            </RadioGroup>
+
+            <LinearLayout style="@style/common_horizontal_division_line_style" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:text="星期一"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="星期二"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="星期三"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="星期四"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="星期五"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="星期六"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="星期日"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:text="上午"/>
+                <ImageView
+                    android:tag="no"
+                    android:id="@+id/imageview_usermessage_11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/pic0"
+                    />
+                <ImageView
+                    android:tag="no"
+                    android:id="@+id/imageview_usermessage_12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/pic0"
+                    />
+                <ImageView
+                    android:tag="no"
+                    android:id="@+id/imageview_usermessage_13"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/pic0"
+                    />
+                <ImageView
+                    android:tag="no"
+                    android:id="@+id/imageview_usermessage_14"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/pic0"
+                    />
+                <ImageView
+                    android:tag="no"
+                    android:id="@+id/imageview_usermessage_15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/pic0"
+                    />
+                <ImageView
+                    android:tag="no"
+                    android:id="@+id/imageview_usermessage_16"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/pic0"
+                    />
+                <ImageView
+                    android:tag="no"
+                    android:id="@+id/imageview_usermessage_17"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/pic0"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:text="下午"/>
+                <ImageView
+                    android:tag="no"
+                    android:id="@+id/imageview_usermessage_21"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/pic0"
+                    />
+                <ImageView
+                    android:tag="no"
+                    android:id="@+id/imageview_usermessage_22"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/pic0"
+                    />
+                <ImageView
+                    android:tag="no"
+                    android:id="@+id/imageview_usermessage_23"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/pic0"
+                    />
+                <ImageView
+                    android:tag="no"
+                    android:id="@+id/imageview_usermessage_24"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/pic0"
+                    />
+                <ImageView
+                    android:tag="no"
+                    android:id="@+id/imageview_usermessage_25"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/pic0"
+                    />
+                <ImageView
+                    android:tag="no"
+                    android:id="@+id/imageview_usermessage_26"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/pic0"
+                    />
+                <ImageView
+                    android:tag="no"
+                    android:id="@+id/imageview_usermessage_27"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/pic0"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:text="晚上"/>
+                <ImageView
+                    android:tag="no"
+                    android:id="@+id/imageview_usermessage_31"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/pic0"
+                    />
+                <ImageView
+                    android:tag="no"
+                    android:id="@+id/imageview_usermessage_32"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/pic0"
+                    />
+                <ImageView
+                    android:tag="no"
+                    android:id="@+id/imageview_usermessage_33"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/pic0"
+                    />
+                <ImageView
+                    android:tag="no"
+                    android:id="@+id/imageview_usermessage_34"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/pic0"
+                    />
+                <ImageView
+                    android:tag="no"
+                    android:id="@+id/imageview_usermessage_35"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/pic0"
+                    />
+                <ImageView
+                    android:tag="no"
+                    android:id="@+id/imageview_usermessage_36"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/pic0"
+                    />
+                <ImageView
+                    android:tag="no"
+                    android:id="@+id/imageview_usermessage_37"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/pic0"
+                    />
+            </LinearLayout>
+
+            <LinearLayout style="@style/common_horizontal_division_line_style" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="课时费"/>
+                <EditText
+                    android:id="@+id/edit_addcoure_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="元/课时"/>
+            </LinearLayout>
+
+            <LinearLayout style="@style/common_horizontal_division_line_style" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="假期是否授课"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="暑假"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="寒假"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(均不授课不勾选)"/>
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/common_horizontal_division_line_style" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="发布信息标题"/>
+                <EditText
+                    android:id="@+id/edit_addcourse_sendmessage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/common_horizontal_division_line_style" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="自我介绍"/>
+                <EditText
+                    android:id="@+id/edit_addcoure_introduce"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="3"
+                    android:ellipsize="end"/>
+                <!-- 最多输入三行-->
+            </LinearLayout>
+
+            <LinearLayout style="@style/common_horizontal_division_line_style" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="其他特长"/>
+                <EditText
+                    android:id="@+id/edit_addcoure_speciality"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="2"
+                    android:ellipsize="end"/>
+            </LinearLayout>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="确认添加"/>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
+
+
 
