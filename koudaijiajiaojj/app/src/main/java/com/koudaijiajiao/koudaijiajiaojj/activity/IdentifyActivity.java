@@ -15,13 +15,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
-
 import com.avos.avoscloud.AVException;
 import com.avos.avoscloud.AVFile;
 import com.avos.avoscloud.AVObject;
 import com.avos.avoscloud.SaveCallback;
 import com.koudaijiajiao.koudaijiajiaojj.R;
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;

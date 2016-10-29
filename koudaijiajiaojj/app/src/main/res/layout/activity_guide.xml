@@ -1,17 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/whitesmoke"
     android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/btn_guide_signup"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="注册"/>
 
-    <Button
-        android:id="@+id/btn_guide_login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="登录"/>
+
+    <LinearLayout
+        android:gravity="center"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginBottom="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:background="@drawable/library">
+
+        <LinearLayout
+            android:layout_marginTop="50dp"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#A0ffffff">
+            <TextView
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:textSize="20dp"
+                android:text="分享你的知识，
+                    传递你的智慧"
+                android:textColor="@color/black"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_weight="1">
+
+        <info.hoang8f.widget.FButton
+            android:layout_margin="10dp"
+            android:id="@+id/btn_guide_signup"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:text="注册"
+            app:shadowEnabled="false"
+            />
+
+        <info.hoang8f.widget.FButton
+            android:layout_margin="10dp"
+            android:id="@+id/btn_guide_login"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            app:buttonColor="@color/grey"
+            app:shadowEnabled="false"
+            android:textSize="20dp"
+            android:text="登录"
+            />
+
+    </LinearLayout>
+
+    <!--<Button-->
+        <!--android:id="@+id/btn_guide_signup"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="注册"/>-->
+
+    <!--<Button-->
+        <!--android:id="@+id/btn_guide_login"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="登录"/>-->
 </LinearLayout>
